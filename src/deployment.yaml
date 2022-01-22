@@ -1,5 +1,3 @@
-# Deployment do MongoDB
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -23,11 +21,7 @@ spec:
               value: mongouser
             - name: MONGO_INITDB_ROOT_PASSWORD
               value: mongopwd
-
 ---
-
-# Deployment do Serviço
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -38,11 +32,7 @@ spec:
   ports:
     - port: 27017
   type: ClusterIP
-
 ---
-
-# Deployment da aplicação Rotten Potatoes
-
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -72,11 +62,7 @@ spec:
           value: mongouser
         - name: MONGODB_PASSWORD
           value: mongopwd
-
 ---
-
-# Deployment do serviço da web
-
 apiVersion: v1
 kind: Service
 metadata:
