@@ -41,4 +41,4 @@ jobs:
         with:
           images: johny83br/rotten-potatoes:${{ github.run_number }}
           manifests: |
-            ./manifests/deployment.yaml
+            manifests/deployment.yaml
