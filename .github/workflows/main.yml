@@ -42,3 +42,5 @@ jobs:
           images: johny83br/rotten-potatoes:${{ github.run_number }}
           manifests:
             manifests/deployment.yaml
+        env:
+          KUBECONFIG: ${{ secrets.K8S_KUBECONFIG }}
