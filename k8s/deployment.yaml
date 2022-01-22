@@ -68,6 +68,7 @@ kind: Service
 metadata:
   name: web
 spec:
+  depends_on: web
   selector:
     app: web
   ports:
